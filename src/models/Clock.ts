@@ -1,4 +1,4 @@
 export interface Clock {
     timeZone: string,
-    isDigital: boolean
+    isDigital: boolean   
 }
