@@ -1,0 +1,199 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+  }
+  
+  .analog {
+    width: 200px;    
+    height: 200px;
+    background-color: #2f363e;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow:  10px 50px 70px rgba(0,0,0.0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 30px;
+  }
+  
+  .analog::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #2f363e;
+    border-radius: 50%;
+    border:3px solid #fff;
+   z-index: 100000;
+  }
+  
+  .analog .number {    
+    position: absolute;
+    inset: 0px;
+    color: #fff;    
+    text-align: center;   
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .number1 {    
+    transform : rotate(30deg);    
+  }    
+ 
+  .analog .number2 {    
+    transform : rotate(60deg);
+  }
+ 
+  .analog .number3 {    
+    transform : rotate(90deg);
+  }
+ 
+  .analog .number4 {    
+    transform : rotate(120deg);
+  }  
+ 
+  .analog .number5 {    
+    transform : rotate(150deg);
+  }
+ 
+  .analog .number6 {    
+    transform : rotate(180deg);
+  }
+ 
+  .number7 {    
+    transform : rotate(210deg);
+  }
+ 
+  .analog .number8 {    
+    transform : rotate(240deg);
+  }
+ 
+  .analog .number9 {    
+    transform : rotate(270deg);
+  }
+ 
+  .analog .number10 {    
+    transform : rotate(300deg);
+  }
+ 
+  .analog .number11 {
+    transform : rotate(330deg);
+  }
+ 
+  .analog .number12 {
+    transform : rotate(360deg);
+  }
+
+  .analog .number b {
+    font-size: 0.75em;
+    opacity: 0.45;
+    font-weight: 600;
+    display:inline-block;
+  }
+
+  .analog .number1 b {
+    transform: rotate(-30deg);
+  }
+ 
+  .analog .number2 b {
+    transform: rotate(-60deg);
+  }
+
+  .analog .number3 b {
+    transform: rotate(-90deg);
+  }
+
+  .analog .number4 b {
+    transform: rotate(-120deg);
+  }
+
+  .analog .number5 b {
+    transform: rotate(-150deg);
+  }
+
+  .analog .number6 b {
+    transform: rotate(-180deg);
+  }
+
+  .analog .number7 b {
+    transform: rotate(-210deg);
+  }
+
+  .analog .number8 b {
+    transform: rotate(-240deg);
+  }
+
+  .analog .number9 b {
+    transform: rotate(-270deg);
+  }
+
+  .analog .number10 b {
+    transform: rotate(-300deg);
+  }
+
+  .analog .number11 b {
+    transform: rotate(-330deg);
+  }
+
+  .analog .number12 b {
+    transform: rotate(-360deg);
+  }
+
+.circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 2px solid rgba(0,0,0,0.25);
+  border-radius: 50%;  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.circle i {
+  position: absolute;
+  width: 5px;
+  height: 50%;
+  background : #fee800;
+  opacity: 0.75;  
+  transform-origin: bottom;
+  transform: scaleY(0.5)
+}
+
+
+.circle:nth-child(1) i {
+  width: 2px;
+}
+
+.circle:nth-child(2) i {
+  width: 3px;
+}
+
+.circle:nth-child(3) i {
+  width: 5px;
+}
+
+.circle2 {
+  width: 110px;
+  height: 110px;  
+  z-index: 9;
+}
+
+.circle2 i {  
+  background: #f00;
+}
+
+.circle3 {
+  width: 80px;
+  height: 80px;
+  z-index: 8;
+}
+
+.circle3 i {
+  background : #04fc43;
+}

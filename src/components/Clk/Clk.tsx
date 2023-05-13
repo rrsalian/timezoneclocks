@@ -7,6 +7,5 @@ export function Clk(props: {clock: Clock}) {
         <span>
            <ClockDisplay></ClockDisplay>
         </span>
-        
     )
 }
