@@ -7,10 +7,8 @@ export function ClockList(props: { clocks: Clock[] }) {
     return (
         <div>
             <h3>Contacts</h3>
-            { /*
-                props.clocks.map(clock => <Clk clock={clock} onUpdate={props.onUpdate} onDelete={props.onDelete}></Clk>)
-              */
-                props.clocks.map(clock => <Clk clock={clock}></Clk>)
+            { 
+               props.clocks.map(clock => <Clk clock={clock}></Clk>)
             }
         </div>
     )
