@@ -4,11 +4,8 @@ import './App.css';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import { Clock } from './models/Clock';
-import { ClockSettings } from './components/ClockSettings/ClockSettings_old';
 import { ClockForm  } from './components/ClockForm/ClockForm';
 import { ClockList } from './components/ClockList/ClockList';
-import { updateCall } from 'typescript';
-
 
 const customStyles = {
   content: {    
@@ -31,7 +28,7 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
-
+/*
   function updateClock():void {
     
   }
@@ -39,6 +36,7 @@ function App() {
   function deleteClock():void {
 
   }
+*/
 
   return (
     <div className="App">
@@ -53,19 +51,16 @@ function App() {
       </div>
 
       <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal">  
-        
-                <ClockForm onClose={() => setIsOpen(false)} onSubmitForm={(newClock: Clock) => setClocks([...clocks, newClock])}></ClockForm>
-      </Modal>
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal">  
 
-    
+        <ClockForm onClose={() => setIsOpen(false)} onSubmitForm={(newClock: Clock) => setClocks([...clocks, newClock])}></ClockForm>
+      </Modal>
     </div>
   );
 }
-
 
 export default App;
 

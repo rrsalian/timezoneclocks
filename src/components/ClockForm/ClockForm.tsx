@@ -22,9 +22,9 @@ export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , onClo
         const clock = {                
             timeZone: timeZone,
             isDigital: isDigital
-        };
-        console.log(clock);
-        props.onSubmitForm(clock);        
+        };        
+        props.onSubmitForm(clock);
+        props.onClose();      
     }
 
     return (
