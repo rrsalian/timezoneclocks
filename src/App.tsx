@@ -39,7 +39,7 @@ function App() {
   function addClock(newClock: Clock):void {
     let i = clocks.length;    
     newClock = { ...newClock, id : i + 1};    
-    setClocks([...clocks, newClock]);        
+    setClocks([...clocks, newClock]);      
   }
 
   function deleteClock(clock:Clock): void {
