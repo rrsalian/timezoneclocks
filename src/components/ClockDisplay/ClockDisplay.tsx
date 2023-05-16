@@ -3,7 +3,6 @@ import { Clock } from "../../models/Clock";
 import { AnalogClock } from "../AnalogClock/AnalogClock"
 
 function getCurrentTime(tZ: string) :string {
-
   return (new Intl.DateTimeFormat([], {
     timeZone: tZ,
     hour: 'numeric',
@@ -12,7 +11,7 @@ function getCurrentTime(tZ: string) :string {
   }).format(new Date()))  
 }
 
-export function ClockDisplay(props: {clock : Clock}) {    
+export function ClockDisplay(props: {clock : Clock}) {
     
     const [ time, setTime ] = useState(getCurrentTime(props.clock.timeZone).split(":"));
     
@@ -26,9 +25,9 @@ export function ClockDisplay(props: {clock : Clock}) {
     return (
         <div>
           {!props.clock.isDigital ?            
-            (<AnalogClock time={time}/>)
+            (<AnalogClock time={time} tZn={props.clock.timeZone}/>)
             :
-           (`${time[0]}:${time[1]}:${time[2]}`)
+            (`${time[0]}:${time[1]}:${time[2]}`)
           }
         </div>
     )

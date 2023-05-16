@@ -28,40 +28,46 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
-/*
-  function updateClock():void {
-    
+
+  function addClock(newClock: Clock):void {
+    let i = clocks.length;    
+    newClock = { ...newClock, id : i + 1};    
+    setClocks([...clocks, newClock]);        
   }
 
-  function deleteClock():void {
-
+  function deleteClock(clock:Clock): void {
+    //console.log(clock);
+    //setClocks((prev) => [ ...prev.slice(0, 1), ...prev.slice(i + 1)]);
+    setClocks(clocks.filter(c => c.id !== clock.id));
   }
-*/
+  
+  function updateClock(updClock: Clock): void {
+     //setClocks(updClock);
+  }
 
+  
   return (
     <div className="App">
       <h1>Clock App</h1>
-      <button onClick={() => setIsOpen(true)}>Add Clock</button>
-      <div>
-        {/*                  
-          <ClockList onUpdate={(clock) => {updateClock}} onDelete={(clock) => {deleteClock}} clocks={clocks}></ClockList>
-          */
-          <ClockList clocks={clocks}></ClockList>
-        }
-      </div>
-
+      <button onClick={() => setIsOpen(true)}>Add Clock</button>      
+      
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal">  
 
-        <ClockForm onClose={() => setIsOpen(false)} onSubmitForm={(newClock: Clock) => setClocks([...clocks, newClock])}></ClockForm>
+        <ClockForm onClose={() => setIsOpen(false)} onSubmitForm={(newClock: Clock) =>{addClock(newClock)}}></ClockForm>
       </Modal>
+      <div>
+        {
+         <ClockList clocks={clocks} onDelete={deleteClock}></ClockList>
+        }
+      </div>
+
     </div>
   );
 }
 
 export default App;
 
-//<ContactList onUpdate={() => {}} onDelete={() => {}} contacts={contacts}></ContactList>

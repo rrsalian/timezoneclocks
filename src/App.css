@@ -7,10 +7,15 @@
   pointer-events: none;
 }
 
-.main {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
+button {
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  border:none;
+  border-radius: 5px;
+  box-sizing:border-box;
+  background-color: bisque;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

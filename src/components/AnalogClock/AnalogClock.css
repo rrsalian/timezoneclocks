@@ -1,9 +1,13 @@
-/*
+
 *,*::after,*::before{
     font-family: Gotham Rounded, sans-serif;
     box-sizing: border-box;    
   }
- */ 
+
+  .analog-main {
+    display: flex;
+    justify-content: center;
+  } 
   
   .analog {    
     width: 200px;    
@@ -18,8 +22,7 @@
     position: relative;
     display:flex;
     justify-content: center;
-    align-items:center;
-    margin-bottom: 30px;
+    align-items:center;    
   }
   
   .analog::before {

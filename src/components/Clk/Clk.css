@@ -1,0 +1,34 @@
+tbody {
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+
+thead {
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+
+.table {
+    width:100vw;
+    border:1px solid black;    
+    border:0;
+    margin:0;
+    padding:0
+}
+
+.colHeader {
+    width: 50%;
+    border: 1px solid black;
+    justify-content: space-around;
+    margin : 1px;
+}
+
+.settings {
+    border:1px solid black;
+}
+ 
+.display {
+    border:1px solid black;
+}
