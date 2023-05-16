@@ -43,7 +43,7 @@ export function ClockSettings (props: {clock : Clock, onDelete : (clock : Clock)
       <div>
         <label>Timezone:</label>        
       </div>
-        <select id="timezone-select" value={selectedTimezone} onChange={handleTimezoneChange}>
+        <select id="timezone-select" disabled value={selectedTimezone} onChange={handleTimezoneChange}>
           {timezones.map((timezone) => (
             <option key={timezone.value} value={timezone.value}>
               {timezone.label}
@@ -52,7 +52,7 @@ export function ClockSettings (props: {clock : Clock, onDelete : (clock : Clock)
         </select>
       
       <div>          
-        <input id="digital-checkbox" type="checkbox" checked={showDigital} onChange={handleDigitalChange} />
+        <input id="digital-checkbox" disabled type="checkbox" checked={showDigital} onChange={handleDigitalChange} />
         <label>Digital</label>
       </div>
       <button onClick={onDelete}>Delete</button>
