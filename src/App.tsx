@@ -6,6 +6,8 @@ import Modal from 'react-modal';
 import { Clock } from './models/Clock';
 import { ClockForm  } from './components/ClockForm/ClockForm';
 import { ClockList } from './components/ClockList/ClockList';
+import { TimeZone } from './models/TimeZone';
+
 
 const customStyles = {
   content: {    
@@ -30,21 +32,44 @@ Modal.setAppElement('#root');
 function App() {
   
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [clocks, setClocks ] = useState<Clock[]>([]);  
+  const [clocks, setClocks ] = useState<Clock[]>([]);
   
+  const timeZones:TimeZone[] = [
+    { label: 'New York (EST)', value: "America/New_York" },
+    { label: 'Chicago (CST)', value: 'America/Chicago' },
+    { label: 'Denver (MST)', value: 'America/Denver' },
+    { label: 'Los Angeles (PST)', value: "America/Los_Angeles" },
+    { label: 'London (GMT)', value: 'Europe/London' },
+    { label: 'Paris (CET)', value: 'Europe/Paris' },
+    { label: 'Tokyo (JST)', value: 'Asia/Tokyo' }
+  ];
+
+  const [tZS, setTZS] = useState(timeZones);
+
   function closeModal() {
     setIsOpen(false);
   }
 
-  function addClock(newClock: Clock):void {
-    let i = clocks.length;    
-    newClock = { ...newClock, id : i + 1};    
-    setClocks([...clocks, newClock]);      
+ function addClock(newClock: Clock):void {
+    const i = clocks.length;
+    let lastId = 0;
+    
+    if (i > 0)
+      lastId = clocks[i - 1].id;
+
+    
+    if (lastId !== undefined) {
+      newClock = { ...newClock, id: lastId + 1};
+      setClocks([...clocks, newClock]);
+      setTZS(tZS.filter(t => t.value !== newClock.timeZone));
+    }      
   }
 
   function deleteClock(clock:Clock): void {
-    //console.log(clock);
-    //setClocks((prev) => [ ...prev.slice(0, 1), ...prev.slice(i + 1)]);
+    
+    const newValue = timeZones.find(c => c.value === clock.timeZone);
+    if (newValue !== undefined) 
+      setTZS([...tZS, newValue]);
     setClocks(clocks.filter(c => c.id !== clock.id));
   }
   
@@ -64,11 +89,11 @@ function App() {
         style={customStyles}
         contentLabel="Example Modal">  
 
-        <ClockForm onClose={() => setIsOpen(false)} onSubmitForm={(newClock: Clock) =>{addClock(newClock)}}></ClockForm>
+        <ClockForm onClose={() => setIsOpen(false)} timeZones={tZS} onSubmitForm={(newClock: Clock) =>{addClock(newClock)}}></ClockForm>
       </Modal>
       <div>
         {
-         <ClockList clocks={clocks} onDelete={deleteClock}></ClockList>
+         <ClockList clocks={clocks} onDelete={deleteClock} timeZones={tZS}></ClockList>
         }
       </div>
 

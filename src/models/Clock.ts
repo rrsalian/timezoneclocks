@@ -1,5 +1,5 @@
 export interface Clock {
-    id?: number,
+    id: number,
     timeZone: string,
     isDigital: boolean  
 }

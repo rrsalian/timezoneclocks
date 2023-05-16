@@ -1,30 +1,23 @@
 import { useState } from "react";
 import { Clock } from "../../models/Clock";
+import { TimeZone } from "../../models/TimeZone";
 
-export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , onClose: () => void } ) {
+export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , timeZones:TimeZone[], onClose: () => void } ) {
 
-    const timezones = [
-        { label: 'New York (EST)', value: "America/New_York" },
-        { label: 'Chicago (CST)', value: 'America/Chicago' },
-        { label: 'Denver (MST)', value: 'America/Denver' },
-        { label: 'Los Angeles (PST)', value: "America/Los_Angeles" },
-        { label: 'London (GMT)', value: 'Europe/London' },
-        { label: 'Paris (CET)', value: 'Europe/Paris' },
-        { label: 'Tokyo (JST)', value: 'Asia/Tokyo' }
-    ];
-
-    const [timeZone, setTimeZone] = useState(timezones[0].value);
+    const tZS:TimeZone[] = props.timeZones;
+    const [timeZone, setTimeZone] = useState(tZS[0].value);
     const [isDigital, setIsDigital] = useState(false);
 
     function handleFormSubmit(e: any) {
         e.preventDefault();
         
-        const clock = {                       
+        const clock = {
+            id : 0,
             timeZone: timeZone,
             isDigital: isDigital
-        };        
+        };
         props.onSubmitForm(clock);
-        props.onClose();      
+        props.onClose();
     }
 
     return (
@@ -35,7 +28,7 @@ export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , onClo
                     <label>TimeZone</label>
                 </div>
                 <select id="timezone-select" value={timeZone} onChange={e => setTimeZone(e.target.value)}>
-                    {timezones.map((timezone) => (
+                    {tZS.map((timezone) => (
                         <option key={timezone.value} value={timezone.value}>{timezone.label}</option>
                         ))}
                 </select>
