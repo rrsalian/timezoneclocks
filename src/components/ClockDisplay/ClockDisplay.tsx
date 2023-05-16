@@ -27,7 +27,18 @@ export function ClockDisplay(props: {clock : Clock}) {
           {!props.clock.isDigital ?            
             (<AnalogClock time={time} tZn={props.clock.timeZone}/>)
             :
-            (`${time[0]}:${time[1]}:${time[2]}`)
+            (<div>
+              <div>
+                <b>
+                  {time[0]}:{time[1]}:{time[2]}
+                </b>
+              </div>
+              <div>
+                <b>
+                  {props.clock.timeZone}
+                </b>
+              </div>
+             </div>)
           }
         </div>
     )
