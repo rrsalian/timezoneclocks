@@ -10,7 +10,7 @@ thead {
     border: 0
 }
 
-.table {
+.table {    
     width:100vw;
     border:1px solid black;    
     border:0;
@@ -18,17 +18,13 @@ thead {
     padding:0
 }
 
-.colHeader {
-    width: 50%;
-    border: 1px solid black;
-    justify-content: space-around;
-    margin : 1px;
-}
 
 .settings {
+    width: 50%;
     border:1px solid black;
 }
  
 .display {
+    width: 50%;
     border:1px solid black;
 }

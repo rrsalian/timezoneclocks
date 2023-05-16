@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+body {
+  background-color: antiquewhite;
+}
+
 button {
   margin: 10px;
   width: 100px;
@@ -14,7 +18,7 @@ button {
   border:none;
   border-radius: 5px;
   box-sizing:border-box;
-  background-color: bisque;
+  background-color: gold;
 
 }
 
