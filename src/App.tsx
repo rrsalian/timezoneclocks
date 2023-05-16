@@ -15,6 +15,13 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    backgroundColor: '#A1EEF9',
+    border: '3px solid grey',
+    borderRadius: '5px',
+    width: '200px',
+    height: '200px',
+    fontSize: '18px',
+    fontFamily: 'Arial, sans-serif',
   },
 };
 
@@ -32,7 +39,7 @@ function App() {
   function addClock(newClock: Clock):void {
     let i = clocks.length;    
     newClock = { ...newClock, id : i + 1};    
-    setClocks([...clocks, newClock]);
+    setClocks([...clocks, newClock]);        
   }
 
   function deleteClock(clock:Clock): void {
@@ -50,7 +57,7 @@ function App() {
     <div className="App">
       <h1>Clock App</h1>
       <button onClick={() => setIsOpen(true)}>Add Clock</button>      
-
+      
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
