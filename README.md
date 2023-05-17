@@ -28,7 +28,7 @@ The World Clock App is a web application that allows you to track and display mu
 - The added clocks will be displayed on the main page.
 - To delete a clock, click the "Delete" button next to it.
 
-##Contributots 
+## Contributors 
 - [@Rajesh](https://www.github.com/rrsalian)
 - [@Omar](https://www.github.com/omareo22)
 - [@Franc](https://www.github.com/francr99)
