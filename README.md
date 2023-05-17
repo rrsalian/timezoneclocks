@@ -1,4 +1,4 @@
-# World Clock App
+# World Clock App ⏰ 🌍
 
 The World Clock App is a web application that allows you to track and display multiple timezones simultaneously. You can add clocks for different locations, customize the display format, and easily view the current time for each selected timezone.
 
@@ -6,18 +6,11 @@ The World Clock App is a web application that allows you to track and display mu
 
 ## Features
 
-- Add clocks for various timezones.
-- Choose  the display format (analog or digital).
-- Select different timezones from a dropdown menu.
-- Delete clocks that are no longer needed.
+- Add clocks for various timezones. ✈️ 
+- Choose  the display format (analog or digital). 🕰️
+- Select different timezones from a dropdown menu. 🗒️
+- Delete clocks that are no longer needed. ✏️
 
-## Technologies Used
-
-- React
-- TypeScript
-- HTML
-- CSS
-- -Modal
 
 ## Usage
 
@@ -27,6 +20,15 @@ The World Clock App is a web application that allows you to track and display mu
 - Click the "Submit" button to add the clock.
 - The added clocks will be displayed on the main page.
 - To delete a clock, click the "Delete" button next to it.
+
+
+## Technologies Used
+
+- React
+- TypeScript
+- HTML
+- CSS
+- Modal
 
 ## Contributors 
 - [@Rajesh](https://www.github.com/rrsalian)
