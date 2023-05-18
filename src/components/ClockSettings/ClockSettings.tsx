@@ -43,7 +43,7 @@ export function ClockSettings(props: {
 
   return (
     <div>
-      <div>
+      <div className="top-settings">
         <label>Timezone:</label>
       </div>
       <select className="select-box" value={selectedTimezone} onChange={handleTimezoneChange}>
