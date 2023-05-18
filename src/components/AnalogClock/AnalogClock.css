@@ -97,7 +97,7 @@
 
   .analog .number b {
     font-size: 0.75em;
-    opacity: 0.45;
+    opacity: 1;
     font-weight: 600;
     display:inline-block;
   }

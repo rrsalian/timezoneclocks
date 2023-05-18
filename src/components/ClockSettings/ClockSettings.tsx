@@ -22,13 +22,6 @@ export function ClockSettings(props: {
       isDigital: showDigital,
     });
   }
-  function onUpdate() {
-    props.onUpdate({
-      id: props.clock.id,
-      timeZone: selectedTimezone || "",
-      isDigital: showDigital,
-    });
-  }
 
   const handleTimezoneChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedTimezone(event.target.value);
