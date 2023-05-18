@@ -1,3 +1,15 @@
-button {
-    color: aqua;
+.button-wrap{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.x-button {
+    align-items: flex-end;
+    width: 25%;
+}
+
+.digital-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

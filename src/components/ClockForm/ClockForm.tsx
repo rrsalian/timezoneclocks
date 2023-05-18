@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Clock } from "../../models/Clock";
 import { TimeZone } from "../../models/TimeZone";
+import "./ClockForm.css";
 
 export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , timeZones:TimeZone[], onClose: () => void } ) {
 
@@ -22,7 +23,9 @@ export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , timeZ
 
     return (
         <div className="modal">
-            <button onClick={() => props.onClose()}>X</button>
+            <div className="button-wrap">
+            <button className="x-button" onClick={() => props.onClose()}>X</button>
+            </div>
             <form onSubmit={handleFormSubmit}>        
                 <div>
                     <label>TimeZone</label>
@@ -32,7 +35,7 @@ export function ClockForm( props: { onSubmitForm: (clock: Clock) => void , timeZ
                         <option key={timezone.value} value={timezone.value}>{timezone.label}</option>
                         ))}
                 </select>
-                <div>
+                <div className="digital-button">
                     <input type='checkbox' checked={isDigital} onChange={e => setIsDigital(e.target.checked)}></input>
                     <label>Digital?</label>
                 </div>

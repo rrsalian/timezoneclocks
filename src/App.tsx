@@ -8,7 +8,6 @@ import { ClockForm  } from './components/ClockForm/ClockForm';
 import { ClockList } from './components/ClockList/ClockList';
 import { TimeZone } from './models/TimeZone';
 
-
 const customStyles = {
   content: {    
     top: '50%',
@@ -17,13 +16,16 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#A1EEF9',
-    border: '3px solid grey',
+    backgroundColor: '#F9F9A1',
+    border: '3px solid grey', 
     borderRadius: '5px',
-    width: '200px',
-    height: '200px',
+    width: '300px',
+    height: '250px',
     fontSize: '18px',
     fontFamily: 'Arial, sans-serif',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 };
 
