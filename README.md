@@ -10,6 +10,7 @@ The World Clock App is a web application that allows you to track and display mu
 - Choose  the display format (analog or digital). 🕰️
 - Select different timezones from a dropdown menu. 🗒️
 - Delete clocks that are no longer needed. ✏️
+- Update Timezones of previously selected clocks. ♻️
 
 
 ## Usage
