@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Clock } from "../../models/Clock";
 import { AnalogClock } from "../AnalogClock/AnalogClock";
+import './ClockDisplay.css'
 
 function getCurrentTime(tZ: string | null): string[] {
   const currentDate = new Date();
@@ -34,12 +35,14 @@ export function ClockDisplay(props: { clock: Clock }) {
         <AnalogClock time={time} tZn={props.clock.timeZone} />
       ) : (
         <div>
-          <div>
+          <div className="digital-display">
             <b>
-              {props.clock.timeZone ? `${time[0]}:${time[1]}:${time[2]}` : "Please select timezone"}
+              {props.clock.timeZone
+                ? `${time[0]}:${time[1]}:${time[2]}`
+                : "Please select timezone"}
             </b>
           </div>
-          <div  className="tz-digital">
+          <div className="tz-digital">
             <b>{props.clock.timeZone}</b>
           </div>
         </div>
