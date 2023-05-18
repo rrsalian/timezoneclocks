@@ -34,7 +34,7 @@ export function ClockSettings(props: {
     setSelectedTimezone(event.target.value);
     props.onUpdate({
       id: props.clock.id,
-      timeZone: event.target.value || "", // Set to empty string if undefined
+      timeZone: event.target.value || "", 
       isDigital: showDigital,
     });
   };
@@ -43,7 +43,7 @@ export function ClockSettings(props: {
     setShowDigital(event.target.checked);
     props.onUpdate({
       id: props.clock.id,
-      timeZone: selectedTimezone || "", // Set to empty string if undefined
+      timeZone: selectedTimezone || "", 
       isDigital: event.target.checked,
     });
   };
@@ -53,15 +53,15 @@ export function ClockSettings(props: {
       <div>
         <label>Timezone:</label>
       </div>
-      <select value={selectedTimezone} onChange={handleTimezoneChange}>
-        <option value="">Please select timezone</option> {/* Updated option */}
+      <select className="select-box" value={selectedTimezone} onChange={handleTimezoneChange}>
+        <option value="">Please select timezone</option> {}
         {props.timeZones.map((timezone) => (
           <option key={timezone.value} value={timezone.value}>
             {timezone.label}
           </option>
         ))}
       </select>
-      <div>
+      <div className="digital-div">
         <input
           className="digital-checkbox"
           disabled={!selectedTimezone} 
