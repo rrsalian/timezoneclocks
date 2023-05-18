@@ -24,7 +24,7 @@
     position: relative;
     display:flex;
     justify-content: center;
-    align-items:center;    
+    align-items:center;   
   }
   
   .analog::before {
@@ -203,4 +203,8 @@
 
 .circle3 i {
   background : #04fc43;
+}
+
+.tz-label {
+  padding-top: 10px;
 }

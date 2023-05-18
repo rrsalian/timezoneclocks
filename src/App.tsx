@@ -60,14 +60,24 @@ function App() {
     if (lastId !== undefined) {
       newClock = { ...newClock, id: lastId + 1 };
       setClocks([...clocks, newClock]);
-      setTZS(tZS.filter((t) => t.value !== newClock.timeZone));
+      //setTZS(tZS.filter((t) => t.value !== newClock.timeZone));
     }
   }
 
   function deleteClock(clock: Clock): void {
-    const newValue = timeZones.find((c) => c.value === clock.timeZone);
-    if (newValue !== undefined) setTZS([...tZS, newValue]);
+   // const newValue = timeZones.find((c) => c.value === clock.timeZone);
+    //if (newValue !== undefined) setTZS([...tZS, newValue]);
     setClocks(clocks.filter((c) => c.id !== clock.id));
+  }
+
+  function updateClock(updatedClock: Clock): void {
+    const index = clocks.findIndex((clock) => clock.id === updatedClock.id);
+
+    if (index !== -1) {
+      const updatedClocks = [...clocks];
+      updatedClocks[index] = updatedClock;
+      setClocks(updatedClocks);
+    }
   }
 
   return (
@@ -94,8 +104,9 @@ function App() {
           <ClockList
             clocks={clocks}
             onDelete={deleteClock}
+            onUpdate={updateClock}
             timeZones={tZS}
-          ></ClockList>
+          />
         }
       </div>
     </div>

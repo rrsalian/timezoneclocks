@@ -27,7 +27,7 @@ export function AnalogClock(props : {time : string[], tZn : string}) {
                 <span className="number number11"><b>11</b></span>
                 <span className="number number12"><b>12</b></span>
             </div>
-            <div>
+            <div className="tz-label">
                 <b>
                     {props.tZn}
                 </b>

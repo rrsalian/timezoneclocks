@@ -2,7 +2,8 @@ import { Clock } from "../../models/Clock";
 import { Clk } from "../Clk/Clk";
 import { TimeZone } from "../../models/TimeZone";
 
-export function ClockList(props: { clocks: Clock[] , onDelete : (clock: Clock) => void, timeZones:TimeZone[]}) {
+export function ClockList(props: { clocks: Clock[] , onDelete : (clock: Clock) => void, onUpdate: (updClock: Clock) => void;
+    timeZones:TimeZone[]}) {
     let title;
   
     if (props.clocks.length > 0)
@@ -24,7 +25,7 @@ export function ClockList(props: { clocks: Clock[] , onDelete : (clock: Clock) =
         <div>            
             {title}            
             {
-              props.clocks.map((clock,key) => <Clk key={clock.id} clock={clock} onDelete={props.onDelete} timeZones={props.timeZones} ></Clk>)
+              props.clocks.map((clock,key) => <Clk key={clock.id} clock={clock} onDelete={props.onDelete} onUpdate={props.onUpdate} timeZones={props.timeZones} ></Clk>)
             }
         </div>
     )

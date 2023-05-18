@@ -32,7 +32,9 @@ export function ClockForm(props: {
             X
           </button>
         </div>
-        <p><b>No More Timezones Available</b></p>
+        <p>
+          <b>No More Timezones Available</b>
+        </p>
       </div>
     );
   }
@@ -54,7 +56,7 @@ export function ClockForm(props: {
           onChange={(e) => setTimeZone(e.target.value)}
         >
           {tZS.map((timezone) => (
-            <option key={timezone.value} value={timezone.value}>
+            <option placeholder="Please Select" key={timezone.value} value={timezone.value}>
               {timezone.label}
             </option>
           ))}
