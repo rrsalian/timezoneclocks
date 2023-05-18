@@ -1,47 +1,43 @@
-# Getting Started with Create React App
+# World Clock App ⏰ 🌍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The World Clock App is a web application that allows you to track and display multiple timezones simultaneously. You can add clocks for different locations, customize the display format, and easily view the current time for each selected timezone.
 
-## Available Scripts
+![Screenshot 2023-05-17 at 6 51 35 PM](https://github.com/rrsalian/timezoneclocks/assets/117955494/6335ccaf-2292-4bde-98ec-06b292b9afb8)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add clocks for various timezones. ✈️ 
+- Choose  the display format (analog or digital). 🕰️
+- Select different timezones from a dropdown menu. 🗒️
+- Delete clocks that are no longer needed. ✏️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+- Click the "Add Clock" button to open a modal.
+- In the modal, select a timezone from the dropdown menu.
+- Choose the display format (analog or digital) using the checkbox.
+- Click the "Submit" button to add the clock.
+- The added clocks will be displayed on the main page.
+- To delete a clock, click the "Delete" button next to it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Flow 
+The diagram below demonstrates the flow of the components and how they work together. 
 
-### `npm run build`
+![project](https://github.com/rrsalian/timezoneclocks/assets/117955494/03c68f39-d3dd-4509-a091-e6fa45abc43a)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- TypeScript
+- DOM
+- HTML
+- CSS
+- Modal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors 
+- [@Rajesh](https://www.github.com/rrsalian)
+- [@Omar](https://www.github.com/omareo22)
+- [@Franc](https://www.github.com/francr99)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-#timezoneclocks
