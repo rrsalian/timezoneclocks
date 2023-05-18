@@ -1,15 +1,32 @@
-.button-wrap{
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-}
-
-.x-button {
-    align-items: flex-end;
-    width: 25%;
+.button-wrap {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
 }
 
 .digital-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.digital-check {
+  cursor: pointer;
+}
+
+.modal {
+  position: relative;
+  padding: 0;
+}
+.add-button {
+  cursor: pointer;
+}
+
+.x-button {
+  position: absolute;
+  left: 155px;
+  border: none;
+  width: auto;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
 }

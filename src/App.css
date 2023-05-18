@@ -19,6 +19,7 @@ button {
   border-radius: 5px;
   box-sizing:border-box;
   background-color: gold;
+  cursor: pointer;
 
 }
 
