@@ -75,11 +75,6 @@ function App() {
     setClocks(clocks.filter(c => c.id !== clock.id));
   }
   
-  function updateClock(updClock: Clock): void {
-     //setClocks(updClock);
-  }
-
-  
   return (
     <div className="App">
       <h1>Clock App</h1>
